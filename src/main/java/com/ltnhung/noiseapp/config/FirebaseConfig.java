@@ -11,21 +11,21 @@ import java.io.IOException;
 
 @Configuration
 public class FirebaseConfig {
-    @Bean
-    public FirebaseApp initializeFirebase() throws IOException {
-        FileInputStream serviceAccount = new FileInputStream("src/main/resources/key_private_firebaseaccount.json");
-
-        FirebaseOptions options = FirebaseOptions.builder()
-                .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                .setDatabaseUrl("https://noiseapp-ac53c-default-rtdb.asia-southeast1.firebasedatabase.app/")
-                .build();
-
-        FirebaseApp firebaseApp = null;
-        if (FirebaseApp.getApps().isEmpty()) {
-            firebaseApp = FirebaseApp.initializeApp(options);
-        } else {
-            firebaseApp = FirebaseApp.getInstance();
-        }
-        return firebaseApp;
-    }
+//    @Bean
+//    public FirebaseApp initializeFirebase() throws IOException {
+//        FileInputStream serviceAccount = new FileInputStream("src/main/resources/key_private_firebaseaccount.json");
+//
+//        FirebaseOptions options = FirebaseOptions.builder()
+//                .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+//                .setDatabaseUrl("https://noiseapp-ac53c-default-rtdb.asia-southeast1.firebasedatabase.app/")
+//                .build();
+//
+//        FirebaseApp firebaseApp = null;
+//        if (FirebaseApp.getApps().isEmpty()) {
+//            firebaseApp = FirebaseApp.initializeApp(options);
+//        } else {
+//            firebaseApp = FirebaseApp.getInstance();
+//        }
+//        return firebaseApp;
+//    }
 }
